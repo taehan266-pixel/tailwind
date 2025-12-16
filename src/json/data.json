@@ -1,6 +1,5 @@
 {
-    "mainBanner" : [
-        {
+    "mainBanner" : [ {
             "imgurl": "/banner/m_1.jpg",
             "title": "겨울 필수템 어그부츠 ~60% OFF",
             "subtitle": "A 컬러스 오브 캘리포니아"
@@ -20,5 +19,50 @@
             "title": "겨울 필수템 어그부츠 ~60% OFF",
             "subtitle": "A 컬러스 오브 캘리포니아"
         }
-    ]
+    ],
+    "mainProduct" : {
+        "section_title": "겨울 룩을 포근하게 완성하는 부클 아이템",
+        "products": [
+            {
+            "brand": "HUNTER",
+            "name": "[UNISEX] 셰르파 폰파우치 - 블랙",
+            "price": "39600",
+            "original_price": "99000",
+            "delivery": "바로도착",
+            "이미지" : "/product/f1.jpg"
+            },
+            {
+            "brand": "HUNTER",
+            "name": "[WOMEN] 시어링 인슐레이티드 숏 스노우부츠 - 블랙",
+            "price": "209300",
+            "original_price": "299000",
+            "delivery": "바로도착",
+            "이미지" : "/product/f2.jpg"
+            },
+            {
+            "brand": "HUNTER",
+            "name": "[WOMEN] 시어링 인슐레이티드 숏 스노우부츠 - 화이트옐로우",
+            "price": "209300",
+            "original_price": "299000",
+            "delivery": "바로도착",
+            "이미지" : "/product/f3.jpg"
+            },
+            {
+            "brand": "HUNTER",
+            "name": "[WOMEN] 시어링 인슐레이티드 톨 스노우부츠 - 블랙",
+            "price": "237300",
+            "original_price": "339000",
+            "delivery": "바로도착",
+            "이미지" : "/product/f4.jpg"
+            },
+            {
+            "brand": "HUNTER",
+            "name": "[WOMEN] 시어링 인슐레이티드 톨 스노우부츠 - 화이트옐로우",
+            "price": "237300",
+            "original_price": "339000",
+            "delivery": "바로도착",
+            "이미지" : "/product/f5.jpg"
+            }
+        ]
+    }
 }
