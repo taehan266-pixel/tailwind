@@ -2,20 +2,22 @@
 import mainData from '../json/data.json';
 import type { MainProductSection } from '../types/banner';
 
-
-
 export default function Productset() {
-  const products = mainData.mainProduct as MainProductSection;
+  const products =  (mainData.mainProduct as any) as MainProductSection;
+
+  let count = 0;
+
   return (
 
     <section className='max-w-1550 mx-auto py-[100px]'>
          <h2 className='text-title font-600 mb-[30px]'> 
-           { products.section_title }
+           { products.section_title.split("|")[0] }
          </h2>
-           <ul className='flex gap-[16px] '>
+           <ul className='grid lg:grid-cols-3 grid-cols-2 lg:gap-4 gap-3'>
            {
-  products.products.filter((v)=> v.노출 && v.price !== v.original_price ).slice(0,6).map((v, i) => (
-      <li key={i} className='flex-1'>
+  products.products.map((v, i)=> (
+   
+      v.노출 && v.original_price !== v.price && count < 6 && ++count && <li key={i} className='border pb-5 px-5'>
         <img src={v.이미지} />
 
         <div className='flex flex-col gap-[8px]'>

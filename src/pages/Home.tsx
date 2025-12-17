@@ -10,7 +10,7 @@ import mainData from '../json/data.json';
 import type { MainBannerJson } from '../types/banner';
 
 import Productset from '../component/Productset';
-
+import Productnew from '../component/Productnew';
   export default function Home() {
 
     const bannerData = mainData.mainBanner as MainBannerJson['mainBanner'];
@@ -56,6 +56,7 @@ import Productset from '../component/Productset';
 
       </Swiper>
       <Productset></Productset>
+      <Productnew></Productnew>
  
        
     </div>
