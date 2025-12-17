@@ -1,7 +1,7 @@
 export interface MainBannerItem {
-  imgurl: string;
-  title: string;
-  subtitle: string;
+  imgurl: string
+  title: string
+  subtitle: string
 }
 
 export interface MainBannerJson {
@@ -15,21 +15,23 @@ export interface MainBanner {
 
 // Product
 export interface MainProductItem {
-  brand?: string;
-  name: string;
-  price: number;
-  original_price: number;
-  delivery: string;
-  이미지 : string;
+  brand?: string
+  name: string
+  price: number
+  original_price: number
+  delivery: string
+  이미지 : string
+  노출: boolean
+  등록날짜: string
 }
 
 // Main Product Section
 export interface MainProductSection {
-  section_title: string;
-  products: MainProductItem[];
+  section_title: string
+  products: MainProductItem[]
 }
 
 export interface MainPageData {
-  mainBanner: any[];
+  mainBanner: any[]
   mainProduct: MainProductSection;
 }

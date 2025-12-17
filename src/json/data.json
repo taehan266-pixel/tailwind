@@ -21,48 +21,210 @@
         }
     ],
     "mainProduct" : {
-        "section_title": "겨울 룩을 포근하게 완성하는 부클 아이템",
+        "section_title": "겨울 룩을 포근하게 완성하는 놓칠 수 없는 할인 행사",
         "products": [
-            {
-            "brand": "HUNTER",
-            "name": "[UNISEX] 셰르파 폰파우치 - 블랙",
-            "price": "39600",
-            "original_price": "99000",
-            "delivery": "바로도착",
-            "이미지" : "/product/f1.jpg"
-            },
-            {
-            "brand": "HUNTER",
-            "name": "[WOMEN] 시어링 인슐레이티드 숏 스노우부츠 - 블랙",
-            "price": "209300",
-            "original_price": "299000",
-            "delivery": "바로도착",
-            "이미지" : "/product/f2.jpg"
-            },
-            {
-            "brand": "HUNTER",
-            "name": "[WOMEN] 시어링 인슐레이티드 숏 스노우부츠 - 화이트옐로우",
-            "price": "209300",
-            "original_price": "299000",
-            "delivery": "바로도착",
-            "이미지" : "/product/f3.jpg"
-            },
-            {
-            "brand": "HUNTER",
-            "name": "[WOMEN] 시어링 인슐레이티드 톨 스노우부츠 - 블랙",
-            "price": "237300",
-            "original_price": "339000",
-            "delivery": "바로도착",
-            "이미지" : "/product/f4.jpg"
-            },
-            {
-            "brand": "HUNTER",
-            "name": "[WOMEN] 시어링 인슐레이티드 톨 스노우부츠 - 화이트옐로우",
-            "price": "237300",
-            "original_price": "339000",
-            "delivery": "바로도착",
-            "이미지" : "/product/f5.jpg"
-            }
-        ]
+  {
+    "brand": "HUNTER",
+    "name": "[WOMEN] 시어링 인슐레이티드 숏 스노우부츠 - 블랙",
+    "price": "209300",
+    "original_price": "299000",
+    "delivery": "바로도착",
+    "이미지": "/product/f2.jpg",
+    "노출": true,
+    "등록날짜": "2025-12-10"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[UNISEX] 셰르파 폰파우치 - 블랙",
+    "price": "99000",
+    "original_price": "120000",
+    "delivery": "바로도착",
+    "이미지": "/product/f1.jpg",
+    "노출": true,
+    "등록날짜": "2025-12-15"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[WOMEN] 시어링 인슐레이티드 숏 스노우부츠 - 화이트옐로우",
+    "price": "209300",
+    "original_price": "299000",
+    "delivery": "바로도착",
+    "이미지": "/product/f3.jpg",
+    "노출": true,
+    "등록날짜": "2025-11-20"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[WOMEN] 시어링 인슐레이티드 톨 스노우부츠 - 블랙",
+    "price": "339000",
+    "original_price": "369000",
+    "delivery": "바로도착",
+    "이미지": "/product/f4.jpg",
+    "노출": true,
+    "등록날짜": "2025-12-17"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[WOMEN] 시어링 인슐레이티드 톨 스노우부츠 - 화이트옐로우",
+    "price": "237300",
+    "original_price": "339000",
+    "delivery": "바로도착",
+    "이미지": "/product/f5.jpg",
+    "노출": true,
+    "등록날짜": "2025-12-01"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[UNISEX] 셰르파 폰파우치 - 카키",
+    "price": "39600",
+    "original_price": "99000",
+    "delivery": "바로도착",
+    "이미지": "/product/f1.jpg",
+    "노출": false,
+    "등록날짜": "2025-10-12"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[WOMEN] 레인부츠 숏 - 블랙",
+    "price": "159000",
+    "original_price": "169000",
+    "delivery": "바로도착",
+    "이미지": "/product/f2.jpg",
+    "노출": true,
+    "등록날짜": "2025-12-18"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[MEN] 오리지널 레인부츠 - 네이비",
+    "price": "129000",
+    "original_price": "189000",
+    "delivery": "바로도착",
+    "이미지": "/product/f3.jpg",
+    "노출": false,
+    "등록날짜": "2025-11-05"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[UNISEX] 패딩 방한 슬리퍼",
+    "price": "59000",
+    "original_price": "69000",
+    "delivery": "바로도착",
+    "이미지": "/product/f4.jpg",
+    "노출": true,
+    "등록날짜": "2025-12-16"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[WOMEN] 퍼 트리밍 레인부츠",
+    "price": "189000",
+    "original_price": "249000",
+    "delivery": "바로도착",
+    "이미지": "/product/f5.jpg",
+    "노출": false,
+    "등록날짜": "2025-11-01"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[MEN] 첼시 레인부츠",
+    "price": "169000",
+    "original_price": "169000",
+    "delivery": "바로도착",
+    "이미지": "/product/f1.jpg",
+    "노출": true,
+    "등록날짜": "2025-12-14"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[UNISEX] 플리스 방한장갑",
+    "price": "39000",
+    "original_price": "59000",
+    "delivery": "바로도착",
+    "이미지": "/product/f2.jpg",
+    "노출": false,
+    "등록날짜": "2025-10-28"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[WOMEN] 스노우부츠 미드",
+    "price": "219000",
+    "original_price": "219000",
+    "delivery": "바로도착",
+    "이미지": "/product/f3.jpg",
+    "노출": true,
+    "등록날짜": "2025-12-19"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[MEN] 패딩 방한부츠",
+    "price": "199000",
+    "original_price": "279000",
+    "delivery": "바로도착",
+    "이미지": "/product/f4.jpg",
+    "노출": false,
+    "등록날짜": "2025-11-15"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[UNISEX] 미니 크로스백",
+    "price": "89000",
+    "original_price": "89000",
+    "delivery": "바로도착",
+    "이미지": "/product/f5.jpg",
+    "노출": true,
+    "등록날짜": "2025-12-13"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[WOMEN] 레인부츠 롱 - 블랙",
+    "price": "179000",
+    "original_price": "239000",
+    "delivery": "바로도착",
+    "이미지": "/product/f1.jpg",
+    "노출": false,
+    "등록날짜": "2025-10-20"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[MEN] 레인부츠 숏",
+    "price": "149000",
+    "original_price": "149000",
+    "delivery": "바로도착",
+    "이미지": "/product/f2.jpg",
+    "노출": true,
+    "등록날짜": "2025-12-11"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[UNISEX] 방한 니트 비니",
+    "price": "29000",
+    "original_price": "39000",
+    "delivery": "바로도착",
+    "이미지": "/product/f3.jpg",
+    "노출": false,
+    "등록날짜": "2025-11-08"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[WOMEN] 경량 패딩부츠",
+    "price": "189000",
+    "original_price": "189000",
+    "delivery": "바로도착",
+    "이미지": "/product/f4.jpg",
+    "노출": true,
+    "등록날짜": "2025-12-20"
+  },
+  {
+    "brand": "HUNTER",
+    "name": "[UNISEX] 윈터 크로스백",
+    "price": "69000",
+    "original_price": "99000",
+    "delivery": "바로도착",
+    "이미지": "/product/f5.jpg",
+    "노출": false,
+    "등록날짜": "2025-11-02"
+  }
+]
+
+
     }
 }
