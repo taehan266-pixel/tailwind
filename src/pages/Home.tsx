@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 
@@ -11,14 +12,17 @@ import type { MainBannerJson } from '../types/banner';
 
 import Productset from '../component/Productset';
 import Productnew from '../component/Productnew';
+import Popup from '../component/Popup';
   export default function Home() {
 
     const bannerData = mainData.mainBanner as MainBannerJson['mainBanner'];
+    const [ isPop, isPopshow ] = useState<boolean>(true);
   
 
 
   return (
     <div className=''>
+    { isPop && <Popup isPopshow={isPopshow}></Popup> }
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
