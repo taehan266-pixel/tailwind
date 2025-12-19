@@ -58,7 +58,7 @@ const boardlist: BoardItem[] = [
   return (
     <section>
       <Title bigtitle="커뮤니티" subtitle="열린 마음으로 고객의 소리를 담습니다."></Title>
-      <ul className="text-white text-[36px] mx-auto w-[1024px] flex flex-col gap-4 mt-20">
+      <ul className="text-[36px] mx-auto w-[1024px] flex flex-col gap-4 mt-20 font-kr">
       {
        boardlist.map( (item, idx ) => <li className={ `${ action !== idx && "border-b-2" } ` } key={idx}>
               <h3 className={`text-2x1 ${ action === idx && "font-bold" } mb-2
