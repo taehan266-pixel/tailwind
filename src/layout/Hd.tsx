@@ -1,26 +1,47 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom"
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, EffectFade } from 'swiper/modules';
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
+import { useState, useEffect } from "react"; // : 컨텐츠 변경, 화면 제어
+import { Link, useLocation } from "react-router-dom" // : 주소창 관련 모듈
+import { Swiper, SwiperSlide } from 'swiper/react' // : 슬라이드 작업
+import { Autoplay, EffectFade } from 'swiper/modules'; // : 슬라이드 옵션 
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid"; // : UI 모듈 (아이콘)
 
-import 'swiper/css';
+
+import 'swiper/css'; // : 슬라이드 스타일 (CSS)
 import 'swiper/css/effect-fade';
 
 export default function Hd() {
 
-    const [scrolled, setScrolled] = useState<boolean>(false);
-    const [ allmenu , setAllmenu ] = useState<boolean>(false);
-    const location = useLocation();
-    const isRoot : boolean = location.pathname === "/";
+    const [scrolled, setScrolled] = useState<boolean>(false); // : 스크롤 여부 판단
+    const [ allmenu , setAllmenu ] = useState<boolean>(false); // : 메뉴 여닫힘 여부 판단
 
+    const location = useLocation(); // : 주소창 분석
+    const isRoot : boolean = location.pathname === "/"; // : 첫 페이지 구분
+
+useEffect(() => {
+
+  setAllmenu(false); // : 메뉴 닫힘 처리
+}, [location.pathname]);  // : 주소가 바뀔 때마다 실행 명령
 
     useEffect(() => {
+// : 스크롤바의 위치가 50보다 커지면 TRUE, 아니면 FALSE
+
       const handleScroll = (): void => {
-       setScrolled(window.scrollY > 50);
+       setScrolled(window.scrollY > 50); // 50px 이상 스크롤 시 TRUE
+       setAllmenu(false);
     };
-     window.addEventListener("scroll", handleScroll);
-    return (): void => window.removeEventListener("scroll", handleScroll);
+
+    const handleResizeEvent = () => {
+    setAllmenu(false);
+  };
+
+     window.addEventListener("scroll", handleScroll ); 
+     window.addEventListener("resize", handleResizeEvent );
+
+    return (): void => {
+    window.removeEventListener("scroll", handleScroll );
+    window.removeEventListener("resize", handleResizeEvent );
+    }
+
+    // : 절대 리턴 아래 식 쓰지않기 실행 안됨
     }, [])
 
   return (
@@ -57,24 +78,24 @@ export default function Hd() {
           <img src="/logo.svg" className={`w-[180px] ${ isRoot ? scrolled ? "" : "invert" : "" }`}></img>
         </a>
                           </h1>
-                          <button className="md:hidden w-[36px] text-white" onClick={ () => { setAllmenu(!allmenu) } } >
+                          <button className={`md:hidden w-[36px] ${ isRoot ? scrolled ? "" : "text-white" : "" }`} onClick={ () => { setAllmenu(!allmenu) } } >
                             {
                               allmenu ? <XMarkIcon></XMarkIcon> : <Bars3Icon></Bars3Icon>
                             }
                           </button>
-                          <nav className={`md:block ${ allmenu ? "" : "hidden"} md:[position:unset] absolute top-[100%] 
-          w-full bg-black/70 md:bg-transparent start-0 `}>
-        <ul className={`md:flex gap-6`}>
-            <li>
-                <Link to="/about" className={` ${ isRoot ? scrolled ? "" : "text-white" : "" } hover:text-main hover:border-b-2 text-navi font-600`}> 회사소개</Link>
-            </li>
-            <li>
-                <Link to="/product" className={` ${ isRoot ? scrolled ? "" : "text-white" :"" } hover:text-main hover:border-b-2 text-navi font-600`}>제품소개</Link>
-            </li>
-            <li>
-                <Link to="/board" className={` ${ isRoot ? scrolled ? "" : "text-white" : "" } hover:text-main hover:border-b-2 text-navi font-600`}>커뮤니티</Link>
-            </li>
-        </ul>
+                          <nav className={`md:flex md:justify-end ${ allmenu ? "" : "hidden"} md:[position:unset] absolute top-[100%] 
+                                           w-full bg-black/70 md:bg-transparent start-0 py-5 md:py-0`}>
+                                 <ul className={`flex flex-col md:flex-row items-center md:gap-6 gap-4`}>
+                                     <li>
+                                         <Link to="/about" className={` ${ isRoot ? scrolled ? "" : "!text-white" : "" } text-white md:text-black hover:text-main hover:border-b-2 text-navi font-600`}> 회사소개</Link>
+                                     </li>
+                                     <li>
+                                         <Link to="/product" className={` ${ isRoot ? scrolled ? "" : "!text-white" : "" } text-white md:text-black hover:text-main hover:border-b-2 text-navi font-600`}>제품소개</Link>
+                                     </li>
+                                     <li>
+                                         <Link to="/board" className={` ${ isRoot ? scrolled ? "" : "!text-white" : "" } text-white md:text-black hover:text-main hover:border-b-2 text-navi font-600`}>커뮤니티</Link>
+                                     </li>
+                                 </ul>
                           </nav>
                         </div>
                         
