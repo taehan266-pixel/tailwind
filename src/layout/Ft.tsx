@@ -1,16 +1,19 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 
 export default function Ft() {
+
   const [ plusarrow, setPlusarrow ] = useState<boolean>(true);
   const [ helpopen, setHelpopen ] = useState<boolean>(true);
   const [ comopen, setComopen ] = useState<boolean>(true);
 
+  const location = useLocation();
+  const isAbout : boolean = location.pathname === "/about";
 
 
   return (
-    <footer className="ft border-t-2 font-300 mt-[100px]">
+    <footer className={`ft border-t-2 font-300 ${ isAbout ? "" : "mt-[clamp(20px,5vw,100px)]" } `}>
       <div className="max-w-1550 px-5 gap-[60px] w-full mx-auto py-[50px] flex justify-between">
         <div className="logo hidden xl:block">
           <img src="/logo.svg" className="w-[150px]"></img>
@@ -18,7 +21,7 @@ export default function Ft() {
         <div className="flex-1 grid grid-cols-12 font-kr leading-[1.8]">
             <div className="lg:col-span-4 md:col-span-6 col-span-12 companyinfo xl:order-first order-last"> 
               <h3 onClick={()=>{setComopen(!comopen)}} className="font-700 text-subtitle mb-3 flex justify-between border-b-2 md:border-none">주식회사 포랩코리아 
-                <button className="md:hidden">
+                <button className="md:hidden" >
                   { comopen ? '+' : '-' }
                 </button>
                 </h3>

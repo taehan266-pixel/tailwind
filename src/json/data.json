@@ -59,7 +59,7 @@
     "price": "339000",
     "original_price": "369000",
     "delivery": "바로도착",
-    "이미지": "/product/f4.jpg",
+    "이미지": "/product/f7.jpg",
     "노출": true,
     "등록날짜": "2025-12-17"
   },
@@ -69,7 +69,7 @@
     "price": "237300",
     "original_price": "339000",
     "delivery": "바로도착",
-    "이미지": "/product/f5.jpg",
+    "이미지": "/product/f6.jpg",
     "노출": true,
     "등록날짜": "2025-12-01"
   },
@@ -120,7 +120,7 @@
     "original_price": "249000",
     "delivery": "바로도착",
     "이미지": "/product/f5.jpg",
-    "노출": false,
+    "노출": true,
     "등록날짜": "2025-11-01"
   },
   {

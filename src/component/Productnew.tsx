@@ -2,6 +2,7 @@
 import mainData from '../json/data.json';
 import type { MainProductSection } from '../types/banner';
 
+import Productinfo from './productinfo';
 
 export default function Productset() {
   
@@ -11,7 +12,7 @@ export default function Productset() {
 
   return (
 
-    <section className='max-w-1550 mx-auto py-[100px]'>
+    <section className='max-w-1550 mx-auto py-[100px] px-5 xl:px-0'>
          <h2 className='text-title font-600 mb-[30px]'> 
            { products.section_title.split("|")[1] }
          </h2>
@@ -26,25 +27,8 @@ export default function Productset() {
                   return(
                       
                 
-                   <li key={i} className='border pb-5 px-5'>
-                      <img src={v.이미지} />
-
-                      <div className='flex flex-col gap-[8px]'>
-                        <p>{v.brand} {v.등록날짜}</p>
-                        <p className='mb-2'>{v.name}</p>
-
-                        <p className='flex gap-4 items-end'>
-                          <span className='font-500 text-main'>
-                            {Math.round(
-                              (1 - Number(v.price) / Number(v.original_price)) * 100
-                            )}%
-                          </span>
-                          <span>{Number(v.price).toLocaleString()}원</span>
-                          <span className='line-through opacity-60'>
-                            {Number(v.original_price).toLocaleString()}원
-                          </span>
-                        </p>
-                      </div>
+                   <li key={i} className='flex flex-col'>
+                      <Productinfo v={v}></Productinfo>
                     </li>
                   )
                  
