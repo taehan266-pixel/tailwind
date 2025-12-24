@@ -15,6 +15,7 @@ export interface MainBanner {
 
 // Product
 export interface MainProductItem {
+  productid :number
   brand?: string
   name: string
   price: number

@@ -1,4 +1,5 @@
 import type { MainProductItem } from "../types/banner"
+import { Link } from "react-router-dom";
 
 interface ProductItemProps {
     v : MainProductItem;
@@ -9,7 +10,7 @@ export default function Productinfo({ v }:  ProductItemProps ) {
 const discountRate = Math.round((1 - Number(v.price) / Number(v.original_price)) * 100);
 
   return (
-    <div className="grid grid-cols-[repeat(15,minmax(0,1fr))] md:flex md:flex-col">
+    <Link to={`/product/${v.productid}`} className="grid grid-cols-[repeat(15,minmax(0,1fr))] md:flex md:flex-col">
        <img src={v.이미지} className='rounded-[20px] 
                 col-span-4 sm:col-span-3 md:w-full md:col-span-15 object-cover'></img>
        <div className='flex flex-col gap-[12px] mt-[12px] font-kr 
@@ -22,6 +23,6 @@ const discountRate = Math.round((1 - Number(v.price) / Number(v.original_price))
           { v.price !== v.original_price && <span className='line-through opacity-60'> {Number(v.original_price).toLocaleString()}원</span> }
         </p>
      </div>
-   </div>
+   </Link>
   )
 }

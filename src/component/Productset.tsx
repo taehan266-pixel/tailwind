@@ -2,7 +2,7 @@
 import mainData from '../json/data.json';
 import type { MainProductSection } from '../types/banner';
 
-import Productinfo from './productinfo';
+import Productinfo from './Productinfo';
 
 export default function Productset() {
   const products =  (mainData.mainProduct as any) as MainProductSection;
@@ -11,8 +11,8 @@ export default function Productset() {
 
   return (
 
-    <section className='max-w-1550 mx-auto py-[100px] px-5 xl:px-0'>
-         <h2 className='text-title font-600 mb-[30px]'> 
+    <section className='max-w-1550 mx-auto py-[clamp(30px,8vw,100px)] px-5 xl:px-0'>
+         <h2 className='text-[clamp(22px,3vw,30px)] font-600 mb-[30px]'> 
            { products.section_title.split("|")[0] }
          </h2>
            <ul className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-4 gap-5'>
@@ -20,7 +20,7 @@ export default function Productset() {
   products.products.map((v, i)=> (
    
       v.노출 && v.original_price !== v.price && count < 8 && ++count && <li key={i}
-        className={`pb-5 flex-col ${ count > 6 ? "hidden lg:flex" : "flex" }`}>
+        className={`pb-5 flex-col ${ count > 6 ? "lg:hidden xl:flex flex" : "flex" }`}>
           <Productinfo v={v}></Productinfo>
       </li>
     ))

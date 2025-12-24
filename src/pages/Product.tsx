@@ -20,22 +20,23 @@ const products: Product[] = [
   { name: "기계식 키패드", price: 49000, img : "10.jpg" }
 ];
   return (
-    <section>
+    <section className="px-5">
       <Title bigtitle="제품소개" subtitle="26년 업체 최초 인증제품을 소개합니다."></Title>
-      <ul className="grid lg:grid-cols-3 gap-[clamp(15px,3vw,30px)] grid-cols-2 max-w-[1024px] w-full mx-auto mt-[clamp(2.5rem,3.8vw,10rem)]">
+      <ul className="grid md:grid-cols-3 gap-[clamp(15px,5vw,30px)] grid-cols-2 max-w-[1024px] w-full mx-auto mt-[clamp(2.5rem,3.8vw,10rem)]">
           {
            //  products.map(()=>())
            //  products.map(()=>{return()})
+
             products.map((v)=>(
             <li className="bg-white">
               <div>
                 <img src={`/product/${v.img}`} className="rounded-[20px]"></img>
               </div>
-              <div className="flex justify-between py-4">
+              <div className="flex flex-col md:flex-row text-[clamp(16px,3vw,20px)] font-kr md:justify-between py-4">
                  <p>{v.name}</p>
                  <p className="price text-[#ff5722]">
                   {v.price}
-                  <span className="text-[#555]">원</span>
+                  <span className="text-[#999] font-400 text-[0.9em]">원</span>
                  </p>
               </div>
             </li>))
