@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# KTH_React - 포랩 온라인 브랜드 쇼핑몰 사용 가이드
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**KTH_React**는 Vite로 구축된 현대적인 React 기반 온라인 브랜드 쇼핑몰 웹사이트 애플리케이션입니다.  
+다양한 브랜드와 제품을 소개하고, 사용자 친화적인 쇼핑 경험을 제공하는 UI 컴포넌트와 다중 페이지 구성을 포함합니다.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 프로젝트 개요
 
-## React Compiler
+- 포랩 브랜드를 위한 쇼핑몰 사이트로 제품 카탈로그, 이벤트, 고객 지원, 관리자 기능 제공  
+- 반응형 디자인과 접근성을 고려한 UI/UX  
+- 홈, 브랜드 소개, 이벤트, 제품 상세, 관리자 대시보드 페이지 포함  
+- Radix UI, Tailwind CSS 기반의 현대적인 스타일링  
+- Supabase 연동으로 주문, 사용자 관리 등 백엔드 기능 확장 가능  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 개발 주소
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 배포 URL: https://tailwind-dusky-delta.vercel.app/ 
+- 깃허브: https://github.com/taehan266-pixel/tailwind
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 데이터 관리 및 유지보수
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+본 프로젝트는 data.json 파일을 통해 주요 콘텐츠와 데이터를 일원화하여 관리합니다.
+이 접근 방식은 다음과 같은 장점을 제공합니다:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+· 콘텐츠와 데이터의 분리로 코드와 UI 로직의 복잡도 감소
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+· 손쉬운 업데이트와 확장이 가능하여 비개발자도 데이터 수정 용이
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+· 일관된 데이터 구조 유지로 버그 발생 최소화 및 안정성 강화
+
+· 재사용성 높은 컴포넌트 구현이 가능하여 개발 생산성 향상
+
+· 이를 통해 프로젝트의 유지보수 효율성과 확장성을 크게 높일 수 있습니다.
+
+---
+
+## 필수 요구사항
+
+- Node.js (v20 이상 권장)  
+- npm 또는 yarn 패키지 매니저
+
+---
+
+## 설치 및 실행
+
+```bash
+npm install          # 의존성 설치
+npm run dev          # 개발 서버 실행
+npm run build        # 프로덕션 빌드
