@@ -2,7 +2,7 @@
 import mainData from '../json/data.json';
 import type { MainProductSection } from '../types/banner';
 
-import Productinfo from './Productinfo';
+import Productinfo from './Productinfonew';
 
 export default function Productset() {
   
