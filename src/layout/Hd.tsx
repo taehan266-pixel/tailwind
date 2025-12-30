@@ -75,7 +75,7 @@ useEffect(() => {
                         <div className='flex justify-between align-center px-4 py-[35px]'>
                           <h1 className="flex flex-col items-center justify-center">
         <a href="/" className="text-white font-en">
-          <img src="/logo.svg" className={`w-[180px] ${ isRoot ? scrolled ? "" : "invert" : "" }`}></img>
+          <img src="/logo.svg" className={`w-[180px] ${ isRoot ? scrolled ? "invert" : "" : "invert" }`}></img>
         </a>
                           </h1>
                           <button className={`md:hidden w-[36px] ${ isRoot ? scrolled ? "" : "text-white" : "" }`} onClick={ () => { setAllmenu(!allmenu) } } >
@@ -87,13 +87,13 @@ useEffect(() => {
                                            w-full bg-black/70 md:bg-transparent start-0 py-5 md:py-0`}>
                                  <ul className={`flex flex-col md:flex-row items-center md:gap-6 gap-4`}>
                                      <li>
-                                         <Link to="/about" className={` ${ isRoot ? scrolled ? "" : "!text-white" : "" } text-white md:text-black hover:text-main hover:border-b-2 text-navi font-600`}> 회사소개</Link>
+                                         <Link to="/about" className={` ${ isRoot ? scrolled ? "" : "!text-white" : "" } text-white md:text-black hover:text-main hover:border-b-2 text-navi font-600`}>Intro</Link>
                                      </li>
                                      <li>
-                                         <Link to="/product" className={` ${ isRoot ? scrolled ? "" : "!text-white" : "" } text-white md:text-black hover:text-main hover:border-b-2 text-navi font-600`}>제품소개</Link>
+                                         <Link to="/product" className={` ${ isRoot ? scrolled ? "" : "!text-white" : "" } text-white md:text-black hover:text-main hover:border-b-2 text-navi font-600`}>Product</Link>
                                      </li>
                                      <li>
-                                         <Link to="/board" className={` ${ isRoot ? scrolled ? "" : "!text-white" : "" } text-white md:text-black hover:text-main hover:border-b-2 text-navi font-600`}>커뮤니티</Link>
+                                         <Link to="/board" className={` ${ isRoot ? scrolled ? "" : "!text-white" : "" } text-white md:text-black hover:text-main hover:border-b-2 text-navi font-600`}>Community</Link>
                                      </li>
                                  </ul>
                           </nav>
