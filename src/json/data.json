@@ -10,7 +10,7 @@
             "subtitle": "지금 꼭 필요한 큐레이션 아이템을 만나보세요."
         },
         {
-            "imgurl": "/banner/m_3_1.jpg",
+            "imgurl": "https://gm-dev-resource.gentlemonster.com/service/story/image/5d3bd3be-48b3-4cd9-8b76-4033293bb600/32.marineserre_storylist_pc.jpg",
             "title": "Catch the Sun in Style",
             "subtitle": "당신의 매일을 빛내주는 완벽한 선글라스"
         },
@@ -18,7 +18,25 @@
             "imgurl": "/banner/m_4_1.jpg",
             "title": "Eyes on the Horizon",
             "subtitle": "트렌디한 디자인과 완벽한 보호를 동시에"
+        },
+        {
+            "imgurl": "https://gm-prd-resource.gentlemonster.com/main/banner/undefined/e816e4bb-7d1e-460a-ba80-67a9aac83bd9/storylist_1_pc_3840-1800.jpg",
+            "title": "See the World in Style,",
+            "subtitle": "감각적인 디자인으로 시선을 사로잡다"
+        },
+         {
+            "imgurl": "https://gm-prd-resource.gentlemonster.com/main/banner/undefined/af252f9e-4d9b-4060-8fae-3fd4ead68a93/storylist_1_pc_3840*1800.jpg",
+            "title": "Clear Vision, Confident You,",
+            "subtitle": "선명한 시야로 완성하는 당신의 자신감"
+        },
+         {
+            "imgurl": "https://gm-dev-resource.gentlemonster.com/service/story/image/ee64429e-4e66-4658-adc9-f03b79db772d/7.jentlesalon_storylist_pc.jpg",
+            "title": "Protect, Made to Impress,",
+            "subtitle": "보호는 기본, 스타일은 특별하게"
         }
+        
+
+        
     ],
     "mainProduct" : {
         "section_title": "겨울 룩을 포근하게 완성하는 놓칠 수 없는 할인 행사|핫트렌드 신상을 먼저 느끼세요.",
